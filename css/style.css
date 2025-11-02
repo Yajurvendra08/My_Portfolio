@@ -11,7 +11,6 @@ body {
   scroll-behavior: smooth;
 }
 
-/* Navbar */
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -45,7 +44,9 @@ body {
 
 .nav-links a:hover,
 .nav-links a.active {
-  color: #a29bfe;
+  color: #7ed6df;
+  font-weight: 600;
+  border-bottom: 2px solid #7ed6df;
 }
 
 .hamburger {
@@ -54,7 +55,6 @@ body {
   cursor: pointer;
 }
 
-/* Hero Section */
 .hero {
   display: flex;
   align-items: center;
@@ -80,19 +80,31 @@ body {
 }
 
 .btn {
-  background: #7ed6df;
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background-color: #7ed6df;
   color: #fff;
-  padding: 0.8rem 1.8rem;
-  border-radius: 30px;
+  border-radius: 8px;
   text-decoration: none;
+  font-weight: 600;
   transition: all 0.3s ease;
 }
 
 .btn:hover {
-  background: #a29bfe;
+  background-color: #bc74d6;
+  transform: scale(1.03);
 }
 
-/* Sections */
+.btn.secondary {
+  background-color: #7ed6df;
+  color: #fff;
+  border: none;
+}
+
+.btn.secondary:hover {
+  background-color: #bc74d6;
+}
+
 section {
   padding: 6rem 2rem;
   margin-top: 70px;
@@ -105,7 +117,6 @@ section h2 {
   font-size: 2rem;
 }
 
-/* Projects */
 .project-container {
   display: flex;
   flex-wrap: wrap;
@@ -127,7 +138,6 @@ section h2 {
   box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08);
 }
 
-/* Contact */
 .contact-links a {
   display: inline-block;
   margin: 0.6rem 1rem;
@@ -138,10 +148,53 @@ section h2 {
 }
 
 .contact-links a:hover {
-  color: #a29bfe;
+  color: #6dc9d2;
 }
 
-/* Footer */
+.certificates {
+  padding: 5rem 2rem;
+  background-color: #fffaf3;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2rem;
+  color: #2f3640;
+  margin-bottom: 0.5rem;
+}
+
+.section-subtitle {
+  color: #555;
+  margin-bottom: 2rem;
+}
+
+.certificate-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  justify-items: center;
+}
+
+.certificate-card {
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  padding: 1.5rem;
+  max-width: 320px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.certificate-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+}
+
+.certificate-card img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
 footer {
   background: #ffffff;
   text-align: center;
@@ -150,7 +203,6 @@ footer {
   font-size: 0.9rem;
 }
 
-/* Animations */
 .fade-in {
   opacity: 0;
   transform: translateY(30px);
@@ -162,7 +214,6 @@ footer {
   transform: translateY(0);
 }
 
-/* Responsive */
 @media (max-width: 768px) {
   .nav-links {
     position: absolute;
