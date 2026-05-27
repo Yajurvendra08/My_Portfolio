@@ -31,6 +31,23 @@ body {
   color: #7ed6df;
 }
 
+nav a {
+    text-decoration: none;
+    color: #333;
+    padding: 8px 12px;
+    border-radius: 6px;
+    transition: 0.3s ease;
+}
+
+nav a:hover {
+    color: #bc74d6;
+}
+
+nav a.active {
+    color: #6fd3e7;
+    font-weight: 600;
+}
+
 .nav-links {
   list-style: none;
   display: flex;
