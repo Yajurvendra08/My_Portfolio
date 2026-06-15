@@ -24,3 +24,12 @@ const appearOnScroll = new IntersectionObserver(function (entries, observer) {
 fadeElements.forEach(el => {
   appearOnScroll.observe(el);
 });
+
+// Highlight the current page's nav link
+const currentPage = window.location.pathname.split("/").pop() || "index.html";
+
+document.querySelectorAll(".nav-links a").forEach(link => {
+  if (link.getAttribute("href") === currentPage) {
+    link.classList.add("active");
+  }
+});
